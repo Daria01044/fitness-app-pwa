@@ -174911,8 +174911,10 @@ q=r.w=new A.anT(r,s)}return q},
 atL(a){var s,r,q,p=this
 p.f=new A.bw(new A.aG($.aE,t.V),t.gR)
 s=p.a
-if(J.i(s.readyState,1)){p.f.ja(0)
-p.a7M()}else{if(J.i(s.readyState,2)||J.i(s.readyState,3))p.f.oA(new A.Hs("WebSocket state error: "+A.u(s.readyState)))
+r=s.readyState
+q=self
+if(J.i(r,q.WebSocket.OPEN)){p.f.ja(0)
+p.a7M()}else{if(J.i(s.readyState,q.WebSocket.CLOSING)||J.i(s.readyState,q.WebSocket.CLOSED))p.f.oA(new A.Hs("WebSocket state error: "+A.u(s.readyState)))
 new A.qH(s,"open",!1,t.Sc).gG(0).dC(new A.aLs(p),t.P)}r=t.Sc
 q=t.P
 new A.qH(s,"error",!1,r).gG(0).dC(new A.aLt(p),q)
